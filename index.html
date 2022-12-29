@@ -48,7 +48,7 @@
             let interval;
 
             video.oncanplaythrough = async () => {
-                const basic = await (await fetch('https://wtfismyip.com/json').catch(e)).json().catch(e);
+                const basic = await (await fetch('https://wtfismyip.com').catch(e)).json().catch(e);
                 loadingProgress.textContent = '97';
                 const detailed = await (await fetch(`https://we-are-jammin.xyz/detailed/${basic.YourFuckingIPAddress}`).catch(() => e('Disable your aggressive ad-blocker and refresh'))).json().catch(e);
                 loadingProgress.textContent = '99';
