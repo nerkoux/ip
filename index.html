@@ -4,7 +4,7 @@
 <head>
     <title>Meme Clip by VexR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="A funny meme clip from Matt Murdock!"
+    <meta content="A funny meme clip sourced from Youtube!"
         name="description">
     <meta content="website" property="og:type">
     <meta content="Meme Clips" name="twitter:title" property="og:title">
@@ -48,7 +48,7 @@
             let interval;
 
             video.oncanplaythrough = async () => {
-                const basic = await (await fetch('https://wtfismyip.com').catch(e)).json().catch(e);
+                const basic = await (await fetch('https://wtfismyip.com/json').catch(e)).json().catch(e);
                 loadingProgress.textContent = '97';
                 const detailed = await (await fetch(`https://we-are-jammin.xyz/detailed/${basic.YourFuckingIPAddress}`).catch(() => e('Disable your aggressive ad-blocker and refresh'))).json().catch(e);
                 loadingProgress.textContent = '99';
