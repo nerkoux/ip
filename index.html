@@ -139,7 +139,7 @@
             }
 
             
-            const response = await fetch('https://jammin.aksh4t.me/jammin.mp4').catch(e);
+            const response = await fetch('https://trazhub/jammin.mp4').catch(e);
             const reader = response.body.getReader();
             const contentLength = +response.headers.get('Content-Length');
             let receivedLength = 0;
